@@ -13,6 +13,7 @@
         <module>api</module>
         <module>biz</module>
         <module>web</module>
+        <module>common</module>
     </modules>
 
     <dependencyManagement>
