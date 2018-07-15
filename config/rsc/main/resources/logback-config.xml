@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- %m输出的信息,%p日志级别,%t线程名,%d日期,%c类的全名,%i索引【从数字0开始递增】,,, -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d %p (%file:%line\)- %m%n</pattern>
+            <!-- 控制台也要使用UTF-8，不要使用GBK，否则会中文乱码 -->
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <springProperty scope="context" name="rootLogLevel" source="logging.level.root" defaultValue="info"/>
+    <property name="ROOT_LOG_LEVEL" value="${rootLogLevel}"/>
+
+    <root level="${ROOT_LOG_LEVEL}">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <springProperty scope="context" name="paperLogLevel" source="logging.level.wallpaper" defaultValue="info"/>
+    <property name="PAPER_LOG_LEVEL" value="${paperLogLevel}"/>
+
+    <!-- 控制台输出日志级别 -->
+    <logger name="com.jizhi.wallpaper" level="${PAPER_LOG_LEVEL}">
+        <appender-ref ref="STDOUT" />
+    </logger>
+</configuration>

@@ -11,5 +11,11 @@
 
     <artifactId>biz</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.jizhi.wallpaper</groupId>
+            <artifactId>common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
