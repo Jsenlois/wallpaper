@@ -1,4 +1,4 @@
-package com.jizhi.service;
+package com.jizhi.wallpaper.biz;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.jizhi.service;
+package com.jizhi.wallpaper.biz.service;
 
 public class TestService {
 
